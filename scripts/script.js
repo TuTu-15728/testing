@@ -15,15 +15,11 @@ function includeHTML() {
                         handleModal(); // Call modal handler after the navbar is loaded
                     } else if (this.status == 404) {
                         // First attempt: Try loading the file from the "pages" folder
-                        xhttp.open("GET", "pages/" + file, true);  // Correct relative path
-                        xhttp.send();
-                    }
-                    else if (this.status == 404 && !fileLoaded) {
-                        // Second attempt: Try loading the file from the parent directory
                         xhttp.open("GET", "../" + file, true);  // Correct relative path
                         xhttp.send();
-                        fileLoaded = true; // Mark the file as loaded
-                    } else {
+                    }
+
+                      else {
                         elmnt.innerHTML = "Page not found.";
                     }
                     elmnt.removeAttribute("include-html");
