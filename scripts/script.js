@@ -44,10 +44,9 @@ function setActiveLink() {
         // Log each link's href to compare
         console.log(currentUrl, linkPath);
         if (linkPath === currentUrl) {
-            console.log(currentUrl, linkPath);
             link.classList.add("active");
         } else {
-            console.log(currentUrl, linkPath);
+            // console.log(currentUrl, linkPath);
             link.classList.remove("active");
         }
     });
