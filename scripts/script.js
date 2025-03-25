@@ -17,7 +17,7 @@ function includeHTML() {
                         xhttp.open("GET", "pages/" + file, true);  // Correct relative path
                         xhttp.send();
                     }
-                        else if () {
+                        else if (this.status == 404) {
                         xhttp.open("GET", "../" + file, true);  // Correct relative path
                         xhttp.send();
                     }
