@@ -227,7 +227,7 @@
 .compartContainer {
     margin: 25px;
     height: auto;
-    background-image: url("images/siteImages/compart.jpg");
+    background-image: url("../images/siteImages/compart.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 7px;
@@ -329,7 +329,7 @@
     flex-wrap: wrap;
     padding: 22px;
     justify-content: space-evenly;
-    background-image: url("images/siteImages/fireShield.png");
+    background-image: url("../images/siteImages/fireShield.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(212, 187, 177, 0.319);
