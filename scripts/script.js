@@ -38,8 +38,7 @@ function includeHTML() {
 function setActiveLink() {
     const navLinks = document.querySelectorAll(".nav-link");
     const currentUrl = window.location.pathname;
-    // Log the current URL to ensure it's being read correctly
-    console.log(currentUrl, linkPath);
+
     navLinks.forEach(link => {
         const linkPath = link.getAttribute("href");
         // Log each link's href to compare
