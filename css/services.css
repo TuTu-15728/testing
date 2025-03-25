@@ -291,7 +291,7 @@
 /* Fire Drill Awareness */
 
 .fire-drill-awareness {
-    background-image: url("/images/siteImages/firedrill.jpg");
+    background-image: url("images/siteImages/firedrill.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
