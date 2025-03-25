@@ -13,8 +13,12 @@ function includeHTML() {
             elmnt.innerHTML = this.responseText;
             setActiveLink();  // After navbar is loaded, set the active class
             handleModal(); // Call modal handler after the navbar is loaded
-          }
-          if (this.status == 404) {
+          }  else if (this.status == 404) {
+                        /* If 404, try loading from the 'pages/' directory */
+                        xhttp.open("GET", "pages/" + file, true);  // Correct relative path
+                        xhttp.send();
+                    }
+          else (this.status == 404) {
             elmnt.innerHTML = "Page not found.";
           }
           elmnt.removeAttribute("include-html");
