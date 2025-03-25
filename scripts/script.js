@@ -9,26 +9,26 @@ function includeHTML() {
             xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4) {
-    if (this.status == 200) {
-        elmnt.innerHTML = this.responseText;
-        setActiveLink();  // After navbar is loaded, set the active class
-        handleModal(); // Call modal handler after the navbar is loaded
-    } else if (this.status == 404) {
-        // First attempt: Try loading the file from the "pages" folder
-        xhttp.open("GET", "pages/" + file, true);  // Correct relative path
-        xhttp.send();
-    }
-    else if (this.status == 404 && !fileLoaded) {
-        // Second attempt: Try loading the file from the parent directory
-        xhttp.open("GET", "../" + file, true);  // Correct relative path
-        xhttp.send();
-        fileLoaded = true; // Mark the file as loaded
-    } else {
-        elmnt.innerHTML = "Page not found.";
-    }
-    elmnt.removeAttribute("include-html");
-    includeHTML(); // Recursive call for loading other elements
-}
+                    if (this.status == 200) {
+                        elmnt.innerHTML = this.responseText;
+                        setActiveLink();  // After navbar is loaded, set the active class
+                        handleModal(); // Call modal handler after the navbar is loaded
+                    } else if (this.status == 404) {
+                        // First attempt: Try loading the file from the "pages" folder
+                        xhttp.open("GET", "pages/" + file, true);  // Correct relative path
+                        xhttp.send();
+                    }
+                    else if (this.status == 404 && !fileLoaded) {
+                        // Second attempt: Try loading the file from the parent directory
+                        xhttp.open("GET", "../" + file, true);  // Correct relative path
+                        xhttp.send();
+                        fileLoaded = true; // Mark the file as loaded
+                    } else {
+                        elmnt.innerHTML = "Page not found.";
+                    }
+                    elmnt.removeAttribute("include-html");
+                    includeHTML(); // Recursive call for loading other elements
+                }
 
             };
             xhttp.open("GET", file, true);
