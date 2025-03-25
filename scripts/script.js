@@ -92,14 +92,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.onload = function() {
-        // Get the hash from the URL
         const hash = window.location.hash;
         
-        // If there's a hash (target section), scroll to it
         if (hash) {
             const target = document.querySelector(hash);
             if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
+                // Scroll to the target section, adjusted for the header height
+                window.scrollTo({
+                    top: target.offsetTop - 80,  // Adjust 80 based on your header's height
+                    behavior: 'smooth'
+                });
             }
         }
     };
