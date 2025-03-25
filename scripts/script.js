@@ -39,8 +39,8 @@ function setActiveLink() {
     const navLinks = document.querySelectorAll(".nav-link");
     const currentUrl = window.location.pathname;
 
-    if (currentUrl.startsWith("/testing")) {
-        currentUrl = currentUrl.substring(8);
+    if (currentUrl.startsWith("/testing/")) {
+        currentUrl = currentUrl.substring(9);
     }
     navLinks.forEach(link => {
         const linkPath = link.getAttribute("href");
