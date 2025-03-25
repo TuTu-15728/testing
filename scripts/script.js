@@ -17,7 +17,7 @@ function includeHTML() {
                         xhttp.open("GET", "pages/" + file, true);  // Correct relative path
                         xhttp.send();
                     }
-                    else (this.status == 404) {
+                    else {
                         elmnt.innerHTML = "Page not found.";
                     }
                     elmnt.removeAttribute("include-html");
