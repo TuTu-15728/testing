@@ -38,12 +38,17 @@ function includeHTML() {
 function setActiveLink() {
     const navLinks = document.querySelectorAll(".nav-link");
     const currentUrl = window.location.pathname;
-
+    // Log the current URL to ensure it's being read correctly
+    console.log("Current URL:", currentUrl);
     navLinks.forEach(link => {
         const linkPath = link.getAttribute("href");
+        // Log each link's href to compare
+        console.log("Link href:", linkPath);
         if (linkPath === currentUrl) {
+            console.log("Active link found:", link);
             link.classList.add("active");
         } else {
+            console.log("No match for:", link);
             link.classList.remove("active");
         }
     });
