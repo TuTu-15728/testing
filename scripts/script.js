@@ -15,7 +15,7 @@ function includeHTML() {
                         handleModal(); // Call modal handler after the navbar is loaded
                     } else if (this.status == 404) {
                         // First attempt: Try loading the file from the "pages" folder
-                        xhttp.open("GET", "../" + file, true);  // Correct relative path
+                        xhttp.open("GET", "pages/" + file, true);  // Correct relative path
                         xhttp.send();
                     }
 
