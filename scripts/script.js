@@ -37,10 +37,10 @@ function includeHTML() {
 // Function to highlight the active link based on the current URL
 function setActiveLink() {
     const navLinks = document.querySelectorAll(".nav-link");
-    const currentUrl = window.location.pathname;
+    let currentUrl = window.location.pathname;
 
-    if (currentUrl.startsWith("/testing/")) {
-        currentUrl = currentUrl.substring(9);
+    if (currentUrl.startsWith("/testing")) {
+        currentUrl = currentUrl.substring(8);
     }
     navLinks.forEach(link => {
         const linkPath = link.getAttribute("href");
