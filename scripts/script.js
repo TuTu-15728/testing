@@ -90,3 +90,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Call the includeHTML function to load the navbar
     includeHTML();
 });
+
+window.onload = function() {
+        // Get the hash from the URL
+        const hash = window.location.hash;
+        
+        // If there's a hash (target section), scroll to it
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    };
