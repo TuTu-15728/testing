@@ -1,0 +1,115 @@
+
+*{
+    font-size: 18px;
+}
+
+/* Bottom Last Section (Quick Links & Certifications) */
+
+.mid-last{
+    display: flex;
+    flex-direction: row;
+    /* bottom: 30px; */
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+    background-color: #333b64;
+    /* border: solid red 1px; */
+    padding-top: 22px;
+    padding-bottom: 11px;
+}
+
+
+/* Links Section */
+
+.quick-links{
+    display: flex;
+    flex-direction: column;
+    border-right: solid #c08e23 2px;
+    flex-grow: 1;
+    text-align: center;
+}
+.quick-links h2{
+    color: whitesmoke;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.link-container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: red; */
+}
+
+.links{
+    /* border: solid green 1px; */
+    list-style-type: none;
+
+}
+.links h4{
+    color: #cea132;
+    font-size: 1.5rem;
+    border-bottom: solid red 3px;
+    padding-bottom: 5px;
+    border-radius: 40%;
+}
+.links li{
+    margin: 11px;
+}
+.links a{
+    color: aliceblue;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+
+/* Certifications Section */
+
+.cert{
+    text-align: center;
+    flex-grow: 1;
+}
+
+.cert-header{
+    color: whitesmoke;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.certificates{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5px; 
+}
+
+.certificates img{
+    width: 150px;
+    border: solid royalblue 5px;
+    border-radius: 15px;
+}
+
+.copy{
+    padding: 2px;
+    display: block;
+    color: whitesmoke;
+    background-color: rgba(61, 47, 41, 0.586);
+    text-align: center;
+}
+.copy p{
+    font-size: 0.7rem;
+}
+
+@media (max-width: 1366px) {
+
+    * {
+      font-size: 16px;
+    }
+}
+@media (max-width: 1024px) {
+
+    * {
+      font-size: 14px;
+    }
+  }
