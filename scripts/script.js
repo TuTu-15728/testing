@@ -17,6 +17,10 @@ function includeHTML() {
                         xhttp.open("GET", "pages/" + file, true);  // Correct relative path
                         xhttp.send();
                     }
+                        else if () {
+                        xhttp.open("GET", "../" + file, true);  // Correct relative path
+                        xhttp.send();
+                    }
                     else {
                         elmnt.innerHTML = "Page not found.";
                     }
