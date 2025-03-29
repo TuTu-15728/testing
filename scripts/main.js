@@ -57,3 +57,28 @@ function setupMobileMenu() {
 
 // Initialize
 setupMobileMenu();
+
+function setActivePage() {
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    document.querySelectorAll('.nav-link').forEach(link => {
+        // Get the linked page filename
+        const linkPage = link.getAttribute('href').split('/').pop();
+        
+        // Check if current page matches link
+        if (currentPage === linkPage) {
+            link.classList.add('active');
+            
+            // Also highlight parent menu item for subpages
+            const parentItem = link.closest('.has-submenu');
+            if (parentItem) {
+                parentItem.querySelector('.submenu-toggle').classList.add('active');
+            }
+        }
+    });
+}
+
+// Call this after mobile menu setup
+setupMobileMenu();
+setActivePage();
