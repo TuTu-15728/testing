@@ -68,7 +68,7 @@ async function loadComponents() {
   
   if (headerLoaded) {
     const script = document.createElement('script');
-    script.src = `$scripts/main.js`;
+    script.src = `scripts/main.js`;
     document.body.appendChild(script);
   }
 }
