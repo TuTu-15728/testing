@@ -1,7 +1,7 @@
 // let basePath = window.location.pathname.includes('components') ? '../' : './';
 // const basePath = window.location.pathname.includes('pages') ? '../' : './';
 
-const basePath ="/"
+const basePath ="/testing/"
 async function loadHeader() {
   try {
     const response = await fetch(`${basePath}components/header.html`);
