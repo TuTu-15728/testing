@@ -1,10 +1,9 @@
 // let basePath = window.location.pathname.includes('components') ? '../' : './';
 // const basePath = window.location.pathname.includes('pages') ? '../' : './';
 
-const basePath ="/testing/"
 async function loadHeader() {
   try {
-    const response = await fetch(`${basePath}components/header.html`);
+    const response = await fetch(`components/header.html`);
     if (!response.ok) throw new Error('Header load failed');
     document.body.insertAdjacentHTML('afterbegin', await response.text());
     console.log('Header loaded successfully');
@@ -18,7 +17,7 @@ async function loadHeader() {
 
 async function loadFooter() {
   try {
-    const response = await fetch(`${basePath}components/footer.html`);
+    const response = await fetch(`components/footer.html`);
     if (!response.ok) throw new Error('Footer load failed');
     document.body.insertAdjacentHTML('beforeend', await response.text());
     console.log('Footer loaded successfully');
@@ -69,7 +68,7 @@ async function loadComponents() {
   
   if (headerLoaded) {
     const script = document.createElement('script');
-    script.src = `${basePath}scripts/main.js`;
+    script.src = `$scripts/main.js`;
     document.body.appendChild(script);
   }
 }
